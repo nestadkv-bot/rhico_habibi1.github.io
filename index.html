@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SMP Yayasan Bina Insani</title>
+  <meta name="description" content="SMP Yayasan Bina Insani - Sekolah swasta dengan nilai keagamaan dan visi masa depan cerah." />
+  <style>
+    /* ----- Reset & base ----- */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      line-height:1.45;
+      color:#1f2937;
+      background:linear-gradient(180deg,#f8fafc 0%, #ffffff 100%);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* ----- Container ----- */
+    .container{max-width:1100px;margin:28px auto;padding:20px}
+
+    /* ----- Header / Nav ----- */
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:14px 18px;
+      background:rgba(255,255,255,0.85);
+      border-radius:14px;
+      box-shadow:0 6px 20px rgba(2,6,23,0.06);
+      backdrop-filter: blur(6px);
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .logo{
+      width:56px;height:56px;border-radius:10px;
+      display:grid;place-items:center;
+      background:linear-gradient(135deg,#0ea5a4,#6366f1);
+      color:white;font-weight:700;font-size:18px;
+      box-shadow:0 6px 18px rgba(99,102,241,0.18);
+    }
+    .brand h1{font-size:18px;margin-bottom:2px}
+    .brand p{font-size:12px;color:#425266}
+
+    nav{display:flex;gap:8px;flex-wrap:wrap}
+    .nav-btn{
+      appearance:none;border:0;padding:8px 12px;border-radius:10px;
+      background:transparent;color:#0f172a;font-weight:600;
+      cursor:pointer;font-size:14px;transition:all .18s;
+    }
+    .nav-btn:hover{transform:translateY(-3px);box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+    .nav-btn.primary{
+      background:linear-gradient(90deg,#06b6d4,#7c3aed);color:white;
+      box-shadow:0 8px 26px rgba(99,102,241,0.12)
+    }
+
+    /* ----- Hero ----- */
+    .hero{
+      display:grid;grid-template-columns:1fr 400px;gap:28px;
+      align-items:center;margin:26px 0;
+    }
+    .hero-card{
+      background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.75));
+      padding:28px;border-radius:14px;box-shadow:0 10px 30px rgba(2,6,23,0.06);
+    }
+    .hero h2{font-size:28px;margin-bottom:8px}
+    .hero p{color:#334155;margin-bottom:14px}
+    .cta-row{display:flex;gap:10px;align-items:center}
+    .cta{padding:10px 14px;border-radius:10px;border:0;font-weight:700;cursor:pointer}
+    .cta.primary{background:#0ea5a4;color:white}
+    .cta.ghost{background:transparent;border:1px solid #e6eef2;color:#0f172a}
+
+    /* ----- Quick info card ----- */
+    .card{
+      background:linear-gradient(180deg,#ffffff,#fbfdff);
+      border-radius:12px;padding:18px;box-shadow:0 8px 22px rgba(2,6,23,0.05);
+    }
+    .small{font-size:13px;color:#64748b}
+
+    /* ----- Sections ----- */
+    section{margin:20px 0;padding:22px;border-radius:12px}
+    #visi, #misi, #sejarah, #prestasi, #kontak{
+      background:linear-gradient(180deg,#ffffff,#fbfdff);
+      box-shadow:0 8px 28px rgba(2,6,23,0.04)
+    }
+    .section-title{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+    .section-title h3{font-size:18px}
+    .section-body p{margin-bottom:12px;color:#334155}
+
+    /* ----- Prestasi grid ----- */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+    .tile{padding:14px;border-radius:10px;background:linear-gradient(180deg,#f8fafc,#ffffff);min-height:110px}
+
+    /* ----- Footer ----- */
+    footer{margin-top:24px;padding:20px;border-radius:12px;text-align:center;color:#64748b;font-size:13px}
+
+    /* ----- Responsive ----- */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;gap:16px}
+      nav{display:flex;flex-wrap:wrap}
+      .brand h1{font-size:16px}
+    }
+
+    /* smooth scroll */
+    html{scroll-behavior:smooth}
+  </style>
+</head>
+<body>
+  <div class="container" role="document">
+    <header aria-label="Header sekolah">
+      <div class="brand" aria-hidden="false">
+        <div class="logo" aria-hidden="true">BI</div>
+        <div>
+          <h1>SMP Yayasan Bina Insani</h1>
+          <p class="small">Mendidik dengan nilai keagamaan, menyiapkan masa depan cerah</p>
+        </div>
+      </div>
+
+      <nav aria-label="Navigasi utama">
+        <a class="nav-btn" href="#beranda">Beranda</a>
+        <a class="nav-btn" href="#visi">Visi Misi</a>
+        <a class="nav-btn" href="#sejarah">Sejarah</a>
+        <a class="nav-btn" href="#prestasi">Prestasi</a>
+        <a class="nav-btn primary" href="#kontak">Kontak</a>
+      </nav>
+    </header>
+
+    <!-- HERO / BERANDA -->
+    <main id="beranda" class="hero" aria-labelledby="hero-heading">
+      <div class="hero-card">
+        <h2 id="hero-heading">Selamat datang di SMP Yayasan Bina Insani</h2>
+        <p>Di SMP Yayasan Bina Insani kami menggabungkan nilai-nilai keagamaan yang kuat dengan pendekatan pembelajaran modern untuk membentuk siswa berkarakter dan siap menghadapi tantangan masa depan.</p>
+
+        <div class="cta-row">
+          <a class="cta primary" href="#visi" role="button">Jelajahi Visi & Misi</a>
+          <a class="cta ghost" href="#prestasi" role="button">Lihat Prestasi</a>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
+          <div class="card small" style="flex:1">
+            <strong>Alamat</strong>
+            <div>Jl. Karyawan I No.1 02, RT.002/RW.002</div>
+          </div>
+          <div class="card small" style="width:220px;text-align:center">
+            <strong>Kontak</strong>
+            <div>087880602322</div>
+            <div style="font-size:12px;margin-top:6px;color:#475569;">Email: @smp_binainsanipinang_kotang</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right info column -->
+      <aside class="card" aria-label="Informasi singkat">
+        <h4 style="margin-bottom:8px">Mengapa memilih kami?</h4>
+        <p class="small">Kurikulum seimbang, penguatan karakter religius, bimbingan ekstrakurikuler, dan fasilitas pendukung untuk tumbuh kembang siswa.</p>
+
+        <div style="margin-top:12px">
+          <strong class="small">Program unggulan</strong>
+          <ul style="margin-top:8px;color:#334155">
+            <li>Pembentukan karakter berlandaskan agama</li>
+            <li>Pembinaan akademik dan lomba (olimpiade)</li>
+            <li>Ekstrakurikuler olahraga & seni</li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <!-- VISI & MISI -->
+    <section id="visi" aria-labelledby="visi-title">
+      <div class="section-title">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect width="24" height="24" rx="6" fill="#e6f7f7"></rect>
+          <path d="M12 6v6l4 2" stroke="#0ea5a4" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3 id="visi-title">Visi & Misi</h3>
+      </div>
+      <div class="section-body">
+        <p><strong>Visi</strong><br>
+        Menjadi lembaga pendidikan dasar yang berlandaskan nilai-nilai keagamaan yang kokoh dan berorientasi pada pembentukan generasi muda berakhlak mulia, cerdas, dan siap menyongsong masa depan yang cerah.</p>
+
+        <p><strong>Misi</strong></p>
+        <ol style="padding-left:18px;margin-bottom:8px;color:#334155">
+          <li>Mengembangkan pembelajaran yang integratif antara nilai keagamaan dan kemampuan abad 21 (kreativitas, berpikir kritis, kolaborasi, komunikasi).</li>
+          <li>Membina karakter siswa melalui kegiatan keagamaan, layanan bimbingan, dan keteladanan pendidik.</li>
+          <li>Mendorong prestasi akademik dan non-akademik untuk membuka peluang masa depan yang lebih baik bagi setiap siswa.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- SEJARAH -->
+    <section id="sejarah" aria-labelledby="sejarah-title">
+      <div class="section-title">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect width="24" height="24" rx="6" fill="#f3f0ff"></rect>
+          <path d="M7 11h10M7 15h6" stroke="#7c3aed" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3 id="sejarah-title">Sejarah Sekolah</h3>
+      </div>
+      <div class="section-body">
+        <p>SMP Yayasan Bina Insani didirikan dengan tujuan menyediakan pendidikan dasar yang mengokohkan iman serta mempersiapkan siswa menghadapi dinamika masa depan. Sejak awal berdiri, sekolah fokus pada penguatan keagamaan dan kualitas akademik melalui tenaga pendidik yang berdedikasi serta program-program pembelajaran inovatif.</p>
+
+        <p>Perkembangan sekolah tumbuh bersama dukungan masyarakat, orang tua, dan yayasan. Berbagai kegiatan ekstrakurikuler dan lomba menjadi bagian dari tradisi pengembangan bakat siswa hingga munculnya prestasi di bidang olahraga, sains, dan seni.</p>
+      </div>
+    </section>
+
+    <!-- PRESTASI -->
+    <section id="prestasi" aria-labelledby="prestasi-title">
+      <div class="section-title">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect width="24" height="24" rx="6" fill="#fff7ed"></rect>
+          <path d="M12 7l1.8 3.6L17 12l-3 2.4L14 18l-2-1.6L10 18l0-3.6L7 12l3.2-1.4L12 7z" stroke="#f59e0b" stroke-width="0.8" fill="#fef3c7"/>
+        </svg>
+        <h3 id="prestasi-title">Prestasi</h3>
+      </div>
+
+      <div class="section-body">
+        <p>Kami bangga atas prestasi siswa di berbagai bidang. Berikut rangkuman capaian terbaru yang menjadi bukti komitmen pembinaan di sekolah.</p>
+
+        <div class="grid" role="list">
+          <article class="tile" role="listitem" aria-label="Prestasi olahraga">
+            <h4 style="margin-bottom:8px">Prestasi Olahraga</h4>
+            <ul style="padding-left:16px;color:#334155">
+              <li>Juara 1 Sepak Bola Antar-SMP Tingkat Kota</li>
+              <li>Juara 2 Bola Voli Pelajar Kabupaten</li>
+              <li>Atlet atletik masuk final lomba lari 100m kategori SMP</li>
+            </ul>
+          </article>
+
+          <article class="tile" role="listitem" aria-label="Prestasi olimpiade">
+            <h4 style="margin-bottom:8px">Olimpiade & Akademik</h4>
+            <ul style="padding-left:16px;color:#334155">
+              <li>Medali perunggu Olimpiade Matematika Tingkat Kota</li>
+              <li>Siswa lolos seleksi olimpiade IPA provinsi</li>
+              <li>Tim KSN sekolah berprestasi di lomba sains</li>
+            </ul>
+          </article>
+
+          <article class="tile" role="listitem" aria-label="Prestasi seni">
+            <h4 style="margin-bottom:8px">Lomba Karya Seni</h4>
+            <ul style="padding-left:16px;color:#334155">
+              <li>Juara 1 Lomba melukis antar-Pelajar</li>
+              <li>Penghargaan desain poster tingkat kota</li>
+              <li>Pementasan drama religi mendapat pujian publik</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section id="kontak" aria-labelledby="kontak-title">
+      <div class="section-title">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect width="24" height="24" rx="6" fill="#eef2ff"></rect>
+          <path d="M3 8c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8z" stroke="#6366f1" stroke-width="1" fill="#f8fafc"/>
+        </svg>
+        <h3 id="kontak-title">Kontak & Lokasi</h3>
+      </div>
+
+      <div class="section-body" style="display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start">
+        <div style="flex:1;min-width:260px">
+          <p><strong>Alamat:</strong><br>Jl. Karyawan I No.1 02, RT.002/RW.002</p>
+          <p><strong>Telepon:</strong><br>087880602322</p>
+          <p><strong>Email:</strong><br><span style="font-family:monospace">@smp_binainsanipinang_kotang</span></p>
+        </div>
+
+        <div style="flex:1;min-width:260px">
+          <p><strong>Jam operasional:</strong><br>Senin - Jumat: 07:00 - 15:00</p>
+          <p class="small">Untuk kunjungan atau kebutuhan administrasi, silakan hubungi nomor di atas atau datang langsung ke alamat sekolah.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>SMP Yayasan Bina Insani — Mendidik dengan nilai keagamaan & persiapan masa depan.</div>
+      <div style="margin-top:8px">Alamat: Jl. Karyawan I No.1 02, RT.002/RW.002 • Tel: 087880602322 • Email: @smp_binainsanipinang_kotang</div>
+    </footer>
+  </div>
+
+  <!-- Optional: tiny JS for keyboard accessibility & focus -->
+  <script>
+    // focus outlines for keyboard users
+    (function(){
+      function handleFirstTab(e){
+        if(e.key === 'Tab'){
+          document.documentElement.classList.add('user-is-tabbing');
+          window.removeEventListener('keydown', handleFirstTab);
+        }
+      }
+      window.addEventListener('keydown', handleFirstTab);
+    })();
+  </script>
+</body>
+</html>
